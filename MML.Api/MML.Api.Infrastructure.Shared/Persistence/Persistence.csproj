@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F26D8BD3-C360-4418-809E-3E711F2C37FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PFASolutions.EnterpriseLibrary.Persistence</RootNamespace>
+    <AssemblyName>PFASolutions.EnterpriseLibrary.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Transaction, Version=2.0.35.0, Culture=neutral, PublicKeyToken=afc61983f100d280, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Transaction.2.0.35\lib\net461\Dapper.Transaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.3\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spring.Aop.2.0.1\lib\net45\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spring.Data.2.0.1\lib\net45\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate4">
+      <HintPath>..\packages\Spring.Data.NHibernate4.2.0.1\lib\net45\Spring.Data.NHibernate4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.3\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Spatial, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yuhan.Common">
+      <HintPath>..\packages\Yuhan.Common.1.5.4\lib\Yuhan.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yuhan.WPF">
+      <HintPath>..\packages\Yuhan.WPF.1.4.2.0\lib\Yuhan.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Yuhan.WPF.CustomWindow">
+      <HintPath>..\packages\Yuhan.WPF.CustomWindow.1.3.130828\lib\Yuhan.WPF.CustomWindow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractEntityManager.cs" />
+    <Compile Include="Azure\AzureBlobManager.cs" />
+    <Compile Include="Azure\AzureCollectionAttribute.cs" />
+    <Compile Include="Azure\AzureEntityManager.cs" />
+    <Compile Include="Azure\AzureInterceptor.cs" />
+    <Compile Include="Azure\AzureTableManager.cs" />
+    <Compile Include="Azure\DynamicPersistentEntity.cs" />
+    <Compile Include="Azure\ErrorHandlers\AzureTableStorageErrorHandler.cs" />
+    <Compile Include="Azure\ErrorHandlers\IErrorHandler.cs" />
+    <Compile Include="Azure\Extensions\EntityPropertyExtensions.cs" />
+    <Compile Include="Azure\Extensions\ObjectExtensions.cs" />
+    <Compile Include="Azure\IAzureEntityManager.cs" />
+    <Compile Include="BaseQuery.cs" />
+    <Compile Include="Dapper\ColumnMapBasic.cs" />
+    <Compile Include="Dapper\CustomTypeMap.cs" />
+    <Compile Include="Dapper\DapperEntityManager.cs" />
+    <Compile Include="Dapper\ICriteriaInterceptor.cs" />
+    <Compile Include="Dapper\IQueryInfoInterceptor.cs" />
+    <Compile Include="Dapper\MemberMap.cs" />
+    <Compile Include="Dapper\QueryString.cs" />
+    <Compile Include="Dapper\Schema\ColumnAttribute.cs" />
+    <Compile Include="Dapper\Schema\ColumnAttributeTypeMapper.cs" />
+    <Compile Include="Dapper\Schema\FallBackTypeMapper.cs" />
+    <Compile Include="Dapper\Schema\TableMapper.cs" />
+    <Compile Include="Dapper\Schema\TypeMapper.cs" />
+    <Compile Include="Dapper\TypeHandlers\DateTimeHandler.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="ICacheManager.cs" />
+    <Compile Include="Azure\PersistentEntity.cs" />
+    <Compile Include="Azure\TableQueryParameters.cs" />
+    <Compile Include="Azure\Transformers\BaseTransformer.cs" />
+    <Compile Include="Azure\Transformers\DteTransformer.cs" />
+    <Compile Include="Azure\Transformers\IAzureTransformer.cs" />
+    <Compile Include="Azure\Transformers\IgnoreProperty.cs" />
+    <Compile Include="Azure\Transformers\JsonCollectionTransformer.cs" />
+    <Compile Include="Azure\Transformers\RelatedContainerTransformer.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Criteria.cs" />
+    <Compile Include="Dapper\DapperRepository.cs" />
+    <Compile Include="Dapper\ReadOnlyDataManager.cs" />
+    <Compile Include="Dapper\Repository.cs" />
+    <Compile Include="IDapperEntityManager.cs" />
+    <Compile Include="IQuery.cs" />
+    <Compile Include="IReadOnlyDataManager.cs" />
+    <Compile Include="NestedQueryObjectAttribute.cs" />
+    <Compile Include="NHibernate\StatelessSessionEntityManager.cs" />
+    <Compile Include="NonEditableAttribute.cs" />
+    <Compile Include="NonExistantColumnException.cs" />
+    <Compile Include="QueryInfo.cs" />
+    <Compile Include="QueryInfoExtensions.cs" />
+    <Compile Include="ResultSetFilterAttribute.cs" />
+    <Compile Include="RowCount.cs" />
+    <Compile Include="SortOrder.cs" />
+    <Compile Include="IEntityManager.cs" />
+    <Compile Include="IKeyValueManager.cs" />
+    <Compile Include="ILinqBuilder.cs" />
+    <Compile Include="LinqBuilder.cs" />
+    <Compile Include="NHibernate\AuditInterceptor.cs" />
+    <Compile Include="NHibernate\ChainedInterceptor.cs" />
+    <Compile Include="NHibernate\EntityManager.cs" />
+    <Compile Include="NHibernate\LocalSessionFactoryObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlPagingException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{f25b9786-d47a-41d3-8032-4cc084ac5ee6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dapper\Schema\Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

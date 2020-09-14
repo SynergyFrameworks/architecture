@@ -3,3 +3,18 @@
 ################################################################################
 
 /MML.Api/MML.Api.Application/bin/Debug/netstandard2.1
+/MML.Api/MML.Api.Application/obj/Debug/netstandard2.1
+/MML.Api/MML.Api.Application/obj
+/MML.Api/MML.Api.Domain/bin/Debug/netstandard2.1
+/MML.Api/MML.Api.Domain/obj/Debug/netstandard2.1
+/MML.Api/MML.Api.Domain/obj
+/MML.Api/MML.Api.Infrastructure.Identity/bin/Debug/netcoreapp3.1
+/MML.Api/MML.Api.Infrastructure.Identity/obj
+/MML.Api/MML.Api.Infrastructure.Persistence/bin/Debug/netcoreapp3.1
+/MML.Api/MML.Api.Infrastructure.Persistence/obj
+/MML.Api/MML.Api.Infrastructure.Shared/bin/Debug/netcoreapp3.1
+/MML.Api/MML.Api.Infrastructure.Shared/Caching/obj/Debug
+/MML.Api/MML.Api.Infrastructure.Shared/obj
+/MML.Api/MML.Api.Infrastructure.Shared/Persistence/bin/Debug
+/MML.Api/MML.Api.WebApi/bin/Debug/netcoreapp3.1
+/MML.Api/MML.Api.WebApi/obj
